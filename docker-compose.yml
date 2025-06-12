@@ -2,12 +2,10 @@ version: "3.8"
 
 services:
   web:
-    build:
-      context: ./web
-      target: development
+    build: ./web
     container_name: memoirai-web
     ports:
-      - "3000:80"
+      - "3000:3000"
     volumes:
       - ./web:/app
       - /app/node_modules
