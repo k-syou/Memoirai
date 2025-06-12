@@ -21,8 +21,11 @@ services:
       - "8000:8000"
     volumes:
       - ./server:/app
+      - /app/__pycache__
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/memoirai
+      - PYTHONPATH=/app
+      - WATCHFILES_FORCE_POLLING=true
     depends_on:
       db:
         condition: service_healthy

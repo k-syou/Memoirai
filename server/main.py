@@ -18,4 +18,4 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to Memoirai API"} 
+    return {"message": "Welcome to Memoirai API Server"} 
